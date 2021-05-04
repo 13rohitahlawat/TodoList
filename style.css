@@ -29,7 +29,27 @@ body {
   padding: 25px;
   border-radius: 5px;
   box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.7);
+  animation: zoom-in 1s linear;
+  transition: zoom-in 0.4s ease;
 }
+.color-varients {
+  animation: color-anim 5s infinite;
+  transition: color-anim 0.4s ease;
+}
+
+/** animatiion for wrapper***/
+@keyframes zoom-in {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(48% 0, 0 0, 0 100%, 49% 100%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  }
+}
+/*** animation end****/
 .wrapper header {
   text-align: center;
   color: #ffffff;
